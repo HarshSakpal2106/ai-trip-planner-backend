@@ -13,7 +13,7 @@ export default async function handler(req, res) {
         The user wants to include these activities: ${activities}.`;
 
         const response = await axios.post(
-            `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateText?key=${process.env.GEMINI_API_KEY}`,
+            `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${process.env.GEMINI_API_KEY}`,
             {
                 prompt: { text: prompt },
             }
